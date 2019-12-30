@@ -1,0 +1,102 @@
+﻿Client-Server Architecture 
+* It is computing model in which the server hosts and manages most of the services/resources. 
+* One or more client computers can be connected to a central server computer using a network or internet. 
+* Since all requests are delivered over a network, this type of architecture is also known as networking computing model.
+* In this architecture, server acts as the producer and client computer acts as the consumer.
+* The client computer sends a request to the server computer via a network/internet.
+* A client can be connected to multiple servers and on the other hand, a server can process multiple clients simultaneously. 
+* Internet is also a form of client server architecture where users sends requests over to web servers to access the data.
+
+
+Basics of Cloud Computing
+* Cloud computing is a model by which users can access to a shared pool of configurable computing resources, on-demand over a network.
+* Basic computing resources include:
+1. Networks
+2. Servers
+3. Storage
+4. Applications 
+5. Services 
+* Unlike traditional IT hosting services, these resources are owned and operated by a third party instead of the company itself using it.
+* Users can access these services at any time, without any interaction with the provider itself.
+* Resources are generally pooled to deliver at scale.
+* We also have the ability to rapidly increase and decrease the size of infrastructure, providing elasticity. 
+* Due to metering of cloud service, the provider charges the customer according to the usage of the services by the customer. 
+
+
+History of Cloud Computing
+* The cloud symbol was used to represent networks of computing equipment in the original ARPANET by as early as 1977, and the CSNET by 1981—both predecessors to the Internet itself. 
+* The term cloud was used to refer to platforms for distributed computing as early as 1993, when Apple spin-off General Magic and AT&T used it in describing their (paired) Telescript and PersonaLink technologies.
+* In August 2006, Amazon created subsidiary Amazon Web Services and introduced its Elastic Compute Cloud (EC2).
+* In April 2008, Google released a beta version of Google App Engine.
+* In February 2010, Microsoft released Microsoft Azure, which was announced in October 2008.
+* On March 1, 2011, IBM announced the IBM SmartCloud framework to support Smarter Planet. Among the various components of the Smarter Computing foundation, cloud computing is a critical part.
+* On June 7, 2012, Oracle announced the Oracle Cloud. This cloud offering is poised to be the first to provide users with access to an integrated set of IT solutions, including the Applications (SaaS), Platform (PaaS), and Infrastructure (IaaS) layers.
+* In May 2012, Google Compute Engine was released in preview, before being rolled out into General Availability in December 2013.
+
+
+Cloud Computing Architecture 
+* Cloud computing architecture consists of two parts:
+1. Back-end
+2. Front-end
+* It is the responsibility of the back-end to provide the security of data for cloud users along with the traffic control mechanism. The server also provides the middleware which helps to connect devices & communicate with each other. 
+* The cloud technology architecture also consists of front-end platforms (as read in the early chapters) called the cloud client which comprises servers, thin & fat client, tablets & mobile devices.
+  
+
+
+
+
+
+Advantages of Cloud Computing
+* Cost saving is the biggest benefit of cloud computing. It helps you to save substantial capital cost as it does not need any physical hardware investments.
+* It helps you to access the latest and applications any time without spending your time and money on installations.
+* Cloud computing allows you to deploy your service quickly in fewer clicks. This faster deployment allows you to get the resources required for your system within fewer minutes. 
+* Once the data is stored in a Cloud, it is easier to get the back-up and recovery of that, which is otherwise very time taking process on-premise. 
+* Reliability is one of the biggest pluses of cloud computing. You can always get instantly updated about the changes. 
+* Employees who are working on the premises or at the remote locations can easily access all the could services. All they need is an Internet connectivity.
+* In the cloud computing, software integration is something that occurs automatically. Therefore, you don't need to take additional efforts to customize and integrate your applications as per your preferences. 
+* The cloud offers almost limitless storage capacity. At any time you can quickly expand your storage capacity with very nominal monthly fees. 
+* The cloud computing platform helps employees who are located in different geographies to collaborate in a highly convenient and secure manner.
+
+
+Disadvantages of Cloud Computing 
+* When you are working in a cloud environment, your application is running on the server which simultaneously provides resources to other businesses. Any greedy behavior or DDOS attack on your tenant could affect the performance of your shared resource. 
+* Cloud technology is always prone to an outage and other technical issues. Even the best cloud service provider companies may face this type of trouble despite maintaining high standards of maintenance. 
+* Another drawback while working with cloud computing services is security risk. Before adopting cloud technology, you should be well aware of the fact that you will be sharing all your company's sensitive information to a third-party cloud computing service provider. Hackers might access this information. 
+* Downtime should also be considered while working with cloud computing. That's because your cloud provider may face power loss, low internet connectivity, service maintenance, etc. 
+* Good Internet connectivity is a must in cloud computing. You can't access cloud without an internet connection. Moreover, you don't have any other way to gather data from the cloud. 
+* Many cloud storage service providers limit bandwidth usage of their users. So, in case if your organization surpasses the given allowance, the additional charges could be significantly costly.
+
+
+Public Cloud 
+* A public cloud is probably the most commonly understood cloud computing option. 
+* This is where all the services and supporting infrastructure are managed off-site over the Internet and shared across multiple users (or tenants).
+* Users subscribe to the service through an individual account but access the same services across the platform through the Internet.
+* The advantage of using a public cloud is the increased efficiency and subsequent cost-effectiveness from shared resources. 
+* Public clouds are typically cheaper than private and hybrid cloud solutions (as well as traditional on-premise computing) because they rely on economies of scale. 
+* Users don’t have to pay for services they aren’t using and don’t have to worry about managing and maintaining the physical infrastructure.
+
+
+Hybrid Cloud
+* Hybrid cloud environments combine both private and public cloud elements to varying degrees. 
+* A private cloud provides IT services through the Internet or a private network to select users, rather than to the general public.
+* Despite operating independently, the clouds in a hybrid environment communicate over an encrypted connection and allow for the portability of data and applications.
+* This is an increasingly popular cloud solution because it allows organizations greater flexibility to meet their IT needs. 
+
+
+Cloud Service Providers
+* Amazon Web Services (AWS): Amazon Web Services (AWS) is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.
+In aggregate, these cloud computing web services provide a set of primitive abstract technical infrastructure and distributed computing building blocks and tools. One of these services is Amazon Elastic Compute Cloud, which allows users to have at their disposal a virtual cluster of computers, available all the time, through the Internet. AWS's version of virtual computers emulate most of the attributes of a real computer, including hardware central processing units (CPUs) and graphics processing units (GPUs) for processing; local/RAM memory; hard-disk/SSD storage; a choice of operating systems; networking; and pre-loaded application software such as web servers, databases, and customer relationship management (CRM). 
+* Google Cloud Platform (GCP): Google Cloud Platform (GCP), offered by Google, is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search and YouTube. Alongside a set of management tools, it provides a series of modular cloud services including computing, data storage, data analytics and machine learning. Registration requires a credit card or bank account details.Google Cloud Platform provides infrastructure as a service, platform as a service, and serverless computing environments.
+* Microsoft Azure: Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides software as a service (SaaS), platform as a service (PaaS) and infrastructure as a service (IaaS) and supports many different programming languages, tools and frameworks, including both Microsoft-specific and third-party software and systems.Azure was announced in October 2008, started with codename "Project Red Dog", and released on February 1, 2010, as "Windows Azure" before being renamed "Microsoft Azure" on March 25, 2014.
+* IBM Cloud: IBM cloud computing is a set of cloud computing services for business offered by the information technology company IBM. IBM cloud includes infrastructure as a service (IaaS), software as a service (SaaS) and platform as a service (PaaS) offered through public, private and hybrid cloud delivery models, in addition to the components that make up those clouds. 
+
+
+Cloud Services 
+* Cloud services come in three primary service models:
+1. Infrastructure as a Service (IaaS)
+2. Platform as a Service (PaaS)
+3. Software as a Service (SaaS)
+* IaaS gives users access to storage, networking, servers, and other computing resources via the cloud, while the user is still responsible for managing their services.
+* PaaS provides a framework that makes it easier and more efficient to build, customize, and deploy applications.
+* SaaS means software is hosted, packaged, and delivered by a third party through the Internet.
+* Function as a service (FaaS) is a category of cloud computing services that provides a platform allowing customers to develop, run, and manage application functionalities without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app. Example: AWS Lambda.
