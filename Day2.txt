@@ -1,0 +1,31 @@
+﻿Virtualization
+* In virtualization, we try to create a virtual copy/version of an actual computing resource.
+* The computing resource could be a storage unit, operating system, server etc.
+* It uses software to simulate the actual hardware component’s functionality to create a virtual system.
+* It allows us to operate more than one virtual environment and various applications on a single server.
+* In an application, guest operating system (guest OS) or data storage is abstracted away from the true underlying hardware or software. 
+
+
+Basics of Virtualization
+* Basic idea behind Virtualization is that software tries to replicate or simulate the existence of any type of hardware. 
+* Hence, it enables us to run more than one independent computer system on a single physical computer.
+* For example: an organization requires a total of 8 servers. The company can run these 8 servers individually on one computer. Or by using virtualization, they can run 4 servers on one computer, thereby requiring only investment for two computers.
+* Each of these simulated computers are known as Virtual Machines (VM).
+* Virtual Machines are actual complete computer systems, which have their own components like processor, memory etc.
+* Here are some basic terms, that are used in Virtualization:
+1. Host/Bare Metal: It is the actual physical computer on which one or more virtual machines run.
+2. Guest: It is used to refer to the Virtual Machine, that is running on a host computer.
+3. Guest Operating System: It is used to refer to the operating system being run by the virtual machine.
+4. Hypervisor: It is the virtualization operating system that is used to create and run the Virtual Machine. 
+
+
+Hypervisor 
+* It is a form of virtualization software used in Virtualization and Cloud hosting to divide and allocate the resources on various pieces of hardware. 
+* It emulates the underlying hardware of the computing resource. 
+* There are two types of Hypervisors:
+1. Type-1: It is also called Native or Bare Metal Hypervisor. It directly runs on the host computer and it does not require any base server operating system. It has direct access to hardware resources.
+2. Type-2: It is also called Hosted Hypervisor. In this, a host operating system runs on the underlying host system. Basically a software is installed onto the operating system of the computing device. This software asks the operating system to make hardware calls.
+* There are three main parts of Hypervisor referencing model: 
+1. Dispatcher: It behaves like the entry point of the monitor and reroutes the instructions of the virtual machine instance to one of the other two modules.
+2. Allocator: It is responsible for deciding the system resources to be provided to the virtual machine instance.It means whenever virtual machine tries to execute an instruction that results in changing the machine resources associated with the virtual machine, the allocator is invoked by the dispatcher.
+3. Interpreter: This module consists of interpreter routines.These are executed, whenever a virtual machine executes a privileged instruction.
