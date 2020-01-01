@@ -1,0 +1,61 @@
+﻿Operating System
+* It acts as an interface between computer hardware and the end user.
+* It performs basic tasks like processing, managing memory and file systems.
+* Input/Output tasks and management of external peripherals are also managed by operating system.
+* Example: Microsoft Windows, Apple MacOS, Android etc, Linux.
+
+
+Process
+* There are a lot of processes for a computer to handle. All of these processes cannot be done at once.
+* Hence, Operating System decides which process gets the processor when and for how much time.
+* Operating system is responsible for Process Scheduling. 
+* It keeps the track of processor and the current processing process.
+* It allocates the processor for processing the task and deallocates processor when process gets completed.
+
+
+Memory
+* Memory is an area of storage of computer hardware. 
+* Main memory provides a fast storage that can be accessed directly by the CPU.
+* For a program to be executed, it must in the main memory.
+* Operating System keeps tracks of primary memory, i.e., what part of it are in use by whom, what part are not in use.
+* In multiprogramming, the OS decides which process will get memory when and how much.
+* Allocates the memory when a process requests it to do so.
+* De-allocates the memory when a process no longer needs it or has been terminated.
+
+
+File System
+* A file system is normally organized into directories for easy navigation and usage. These directories may contain files and other directions.
+* Operating System keeps track of information, location, uses, status etc. The collective facilities are often known as file system.
+* It decides who gets the resources.
+* It allocates and deallocates the resources.
+Basic Linux Commands
+1. Pwd- It gives us the absolute path, which means the path that starts from the root. The root is the base of the Linux file system.
+2. ls — It tells what files are in the directory you are in.
+3. cd — Use the "cd" command to go to a directory.
+4. mkdir & rmdir — Use the mkdir command when you need to create a folder or a directory.
+5. rm - This command is used to delete files and directories.  
+6. touch — The touch command is used to create a file. It can be anything, from an empty txt file to an empty zip file.
+7. man & --help — To know more about a command and how to use it, use the man command. It shows the manual pages of the command. For example, “man cd” shows the manual pages of the cd command. Typing in the command name and the argument helps it show which ways the command can be used (e.g., cd –help).
+8. cp — Use the cp command to copy files through the command line. It takes two arguments: The first is the location of the file to be copied, the second is where to copy.
+9. mv — Use the mv command to move files through the command line. We can also use the mv command to rename a file.
+10. locate — The locate command is used to locate a file in a Linux system, just like the search command in Windows.
+Block Storage 
+* Block storage devices provide fixed-sized raw storage capacity. 
+* Each storage volume can be treated as an independent disk drive and controlled by an external server operating system. 
+* This block device can be mounted by the guest operating system as if it were a physical disk.
+* It is ideal for databases, since a DB requires consistent I/O performance and low-latency connectivity.
+Object Storage
+* The object store guarantees that the data will not be lost. 
+* Object storage data can be replicated across different data centers and offer simple web services interfaces for access.
+* A simple use case would see application developers who deal with large amounts of user-generated media, using object storage to store unlimited media files.
+*  As data stores scale to hundreds of terabytes and then into the petabyte range and beyond, object storage becomes even more attractive.
+* Storage of unstructured data like music, image, and video files. Storage for backup files, database dumps, and log files.
+Directory Structure of Linux
+1. /- : The directory called “root.” It is the starting point for the file system hierarchy. Note that this is not related to the root, or superuser, account.
+2. /bin: directory is where you will find binary or executable files. Programs are written in source code which is human readable text. Source code is then compiled into machine readable binaries. They are called binaries because machine code is a series of zeros and ones. The import thing to know is that commands, programs, and applications that you can use are sometimes located in /bin.
+3. Configuration files live in the /etc directory. Configuration files control how the operating system or applications behave. For example, there is a file in /etc that tells the operating system whether to boot into a text mode or a graphical mode.
+4. User home directories are located in /home. If your account name is “pat” your home directory will be /home/pat. Linux systems can and often do have multiple user accounts. Home directories allow each user to separate their data from the other users on the system. The pat directory is known as a subdirectory. A subdirectory is simply a directory that resides inside another directory.
+5. The /opt directory houses optional or third party software. Software that is not bundled with the operating system will often been installed in /opt. 
+6. Temporary space is allocated in /tmp. Most Linux distributions clear the contents of /tmp at boot time. Be aware that if you put files in /tmp and the Linux system reboots, your files will more than likely be gone. The /tmp directory is a great place to store temporary files, but do not put anything in /tmp that you want to keep long term.
+7. The /usr directory is called “user.” You will find user related binary programs and executables in the /usr/bin directory.
+8. Variable data such as log files reside in /var. Specifically, the /var/log directory contains logs generated by the operating system and other applications.
