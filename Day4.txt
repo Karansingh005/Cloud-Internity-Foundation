@@ -1,0 +1,119 @@
+﻿Amazon Web Services (AWS)
+* Amazon Web Services (AWS) is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis. 
+* These cloud computing web services provide a set of primitive abstract technical infrastructure and distributed computing building blocks and tools. 
+* One of these services is Amazon Elastic Compute Cloud, which allows users to have at their disposal a virtual cluster of computers, available all the time, through the Internet. 
+* AWS's version of virtual computers emulate most of the attributes of a real computer, including hardware central processing units (CPUs) and graphics processing units (GPUs) for processing; local/RAM memory; hard-disk/SSD storage; a choice of operating systems; networking; and pre-loaded application software such as web servers, databases, and customer relationship management (CRM).
+* The AWS technology is implemented at server farms throughout the world, and maintained by the Amazon subsidiary. 
+* Fees are based on a combination of usage (known as a "Pay-as-you go" model), the hardware/OS/software/networking features chosen by the subscriber, required availability, redundancy, security, and service options.
+
+
+History of AWS
+* The AWS platform was launched in July 2002. 
+* Then in late 2003, the AWS concept was publicly reformulated.
+* In November 2004, the first AWS service launched for public usage: Simple Queue Service (SQS). Thereafter Pinkham and lead developer Christopher Brown developed the Amazon EC2 service, with a team in Cape Town, South Africa.
+* Amazon Web Services was officially re-launched on March 14, 2006, combining the three initial service offerings of Amazon S3 cloud storage, SQS, and EC2.
+* The AWS platform finally provided an integrated suite of core online services, as Chris Pinkham and Benjamin Black had proposed back in 2003, as a service offered to other developers, web sites, client-side applications, and companies.
+* In November 2010, it was reported that all of Amazon.com's retail sites had migrated to AWS.
+* In April 2015, Amazon.com reported AWS was profitable, with sales of $1.57 billion in the first quarter of the year and $265 million of operating income.
+* In January 2018, Amazon launched an autoscaling service on AWS.
+* In November 2018, AWS announced customized ARM cores for use in its servers.
+
+
+Why AWS?
+* AWS comprised more than 90 (165 as of 2019) services spanning a wide range including computing, storage, networking, database, analytics, application services, deployment, management, mobile, developer tools, and tools for the Internet of Things.
+* AWS owns a dominant 34% of all cloud (IaaS, PaaS) while the next three competitors Microsoft, Google, and IBM have 11%, 8%, 6% respectively according to Synergy Group.
+* Fees are based on a combination of usage (known as a "Pay-as-you go" model), the hardware/OS/software/networking features chosen by the subscriber, required availability, redundancy, security, and service options.
+* Subscribers can pay for a single virtual AWS computer, a dedicated physical computer, or clusters of either. 
+
+
+AWS Console
+* AWS Management Console is a web application for managing Amazon Web Services. 
+* AWS Management Console consists of list of various services to choose from. 
+* It also provides all information related to our account like billing.
+* This console provides an inbuilt user interface to perform AWS tasks like working with Amazon S3 buckets, launching and connecting to Amazon EC2 instances, setting Amazon CloudWatch alarms, etc.
+
+
+Availability zones and region
+
+
+Code
+	Name
+	Opt-in Status
+	Local Zone
+	us-east-2
+	US East (Ohio)
+	Not required
+	No
+	us-east-1
+	US East (N. Virginia)
+	Not required
+	No
+	us-west-1
+	US West (N. California)
+	Not required
+	No
+	us-west-2
+	US West (Oregon)
+	Not required
+	Yes - us-west-2-lax-1a
+You must opt in to the Local Zone.
+	ap-east-1
+	Asia Pacific (Hong Kong)
+	Required
+	No
+	ap-south-1
+	Asia Pacific (Mumbai)
+	Not required
+	No
+	ap-northeast-3
+	Asia Pacific (Osaka-Local)
+	Not required
+	No
+	ap-northeast-2
+	Asia Pacific (Seoul)
+	Not required
+	No
+	ap-southeast-1
+	Asia Pacific (Singapore)
+	Not required
+	No
+	ap-southeast-2
+	Asia Pacific (Sydney)
+	Not required
+	No
+	ap-northeast-1
+	Asia Pacific (Tokyo)
+	Not required
+	No
+	ca-central-1
+	Canada (Central)
+	Not required
+	No
+	eu-central-1
+	Europe (Frankfurt)
+	Not required
+	No
+	eu-west-1
+	Europe (Ireland)
+	Not required
+	No
+	eu-west-2
+	Europe (London)
+	Not required
+	No
+	eu-west-3
+	Europe (Paris)
+	Not required
+	No
+	eu-north-1
+	Europe (Stockholm)
+	Not required
+	No
+	me-south-1
+	Middle East (Bahrain)
+	Required
+	No
+	sa-east-1
+	South America (São Paulo)
+	Not required
+	No
