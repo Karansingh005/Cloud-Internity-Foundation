@@ -89,4 +89,14 @@ Assigning EBS volumes to EC2 instance
 2. Select EC2 from the above services menu and select volumes under Elastic Block Store.
 3. Click on create volume. 
 4. Select the volume type and size according to the usage. Assign an availability zone. 
-5. Click on create volume. You can add this EBS volume to required instance when you’re configuring the storage of your instance.
+5. Click on create volume. You can add this EBS volume to required instance when you’re configuring the storage of your instance. 
+AMI
+An Amazon Machine Image (AMI) provides the information required to launch an instance. You must specify an AMI when you launch an instance. You can launch multiple instances from a single AMI when you need multiple instances with the same configuration. You can use different AMIs to launch instances when you need instances with different configurations.
+An AMI includes the following:                                                   
+* One or more EBS snapshots, or, for instance-store-backed AMIs, a template for the root volume of the instance (for example, an operating system, an application server, and                                 applications).
+                
+* Launch permissions that control which AWS accounts can use the AMI to launch instances.
+                
+* A block device mapping that specifies the volumes to attach to the instance when it's launched.
+
+You can launch an instance from an existing AMI, customize the instance, and then save this updated configuration as a custom AMI. Instances launched from this new custom AMI include the customizations that you made when you created the AMI. The root storage device of the instance determines the process you follow         to create an AMI. The root volume of an instance is either an Amazon EBS volume or an instance store volume.
