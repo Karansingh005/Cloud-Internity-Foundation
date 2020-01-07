@@ -1,0 +1,28 @@
+﻿VPC (Virtual Private Cloud)
+* It lets you create an isolated area of the AWS Cloud so that one can launch cloud resources there.
+* This isolated area acts as a virtual network.
+* It lets us control our virtual environment and also enables us to select range of IP addresses. 
+* We can create a subnet, and can configure our route tables and network gateways.
+* It acts like an endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+* A subnet is a range of IP addresses in your VPC.                
+* A route table contains a set of rules, called routes, that are used to determine where network traffic is directed.                                                 
+* An internet gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication                                         between instances in your VPC and the internet. It therefore imposes no availability risks or bandwidth constraints on your network traffic.
+Configuring a VPC
+1. Open AWS console. Search VPC in the resources and select the option to launch VPC wizard.
+2. Select the option of “VPC with a Single Public Subnet”.
+3. On configuration page, enter the name of VPC.
+4. Here, we can change the endpoints to attach the subnet to any resource, change the default range of IP address or change the availability zone of the VPC.
+5. Click on create VPC.
+Creating a subnet
+1. Open AWS console. Search VPC in the resources and select the option of Subnet under subnets.
+2. Click on create.
+3. Enter the name tag and select VPC that you’ve created.
+4. Specify the availability zone and enter the IPv4 CIDR block for your VPC.
+5. Click create.
+Creating a VPC Security Group
+1. Open AWS console. Search VPC in the resources and select the option of Security group under Security.
+2. Click on create Security group.
+3. Enter a group name.
+4. Select ID of VPC that you’ve created and click on create.
+5. Now edit the inbound rules which dictate the flow of inbound traffic. Select HTTP from the Type list, and enter 0.0.0.0/0 in the Source field. Do same to add HTTPs. 
+6. Click save.
