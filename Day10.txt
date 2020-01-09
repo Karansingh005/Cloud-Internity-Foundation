@@ -1,0 +1,31 @@
+﻿Glacier
+* It is designed for long-term storage of data that is infrequently accessed and for which retrieval latency times of 3 to 5 hours are acceptable. 
+* Storage costs are a consistent $0.004 per gigabyte per month, which is substantially cheaper than Amazon's own Simple Storage Service (S3).
+* Glacier has two costs, one for storage and one for retrieval. Uploading data to Glacier is free. Storage pricing is simple: it currently costs 0.4 cents per gigabyte per month, which is 82% cheaper than S3 Standard.
+* Amazon S3 Glacier and S3 Glacier Deep Archive are a secure, durable, and extremely low-cost Amazon S3 cloud storage classes for data archiving and long-term backup. 
+* To keep costs low yet suitable for varying retrieval needs, Amazon S3 Glacier provides three options for access to archives, from a few minutes to several hours, and S3 Glacier Deep Archive provides two access options ranging from 12 to 48 hours.
+* The Amazon S3 Glacier storage class provides three retrieval options to fit your use case. Expedited retrievals typically return data in 1-5 minutes.
+
+
+Steps for creating Glacier
+1. Sign into the console. Go to Glacier from resources.
+2. Click to create vault. Add vault name and enter notification details.
+3. Click on create.
+
+
+IAM Roles
+* An IAM role is an IAM identity that you can create in your account that has specific permissions. 
+* An IAM role is similar to an IAM user, in that it is an AWS identity with permission policies that determine what the identity can and cannot do in AWS. 
+* However, instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it. 
+* Also, a role does not have standard long-term credentials such as a password or access keys associated with it. 
+* Instead, when you assume a role, it provides you with temporary security credentials for your role session.
+* You can use roles to delegate access to users, applications, or services that don't normally have access to your AWS resources. 
+* For example, you might want to grant users in your AWS account access to the resources they don't usually have, or grant users in one AWS account access to resources in another account. Or you might want to allow a mobile app to use AWS resources, but don’t want to embed AWS keys within the app (where they can be difficult to rotate and where users can potentially extract them). Sometimes you want to give AWS access to users who already have identities defined outside of AWS, such as in your corporate directory. Or, you might want to grant access to your account to third parties so that they can perform an audit on your resources.
+
+
+Creating role
+1. Sign in to the AWS Management Console and open the IAM console.
+2. In the navigation pane of the console, choose Roles and then choose Create role.
+3. Choose the Another AWS account role type.
+4. For Account ID, type the AWS account ID to which you want to grant access to your resources.
+5. If you are granting permissions to users from an account that you do not control, and the users will assume this role programmatically, then select Require external ID.
