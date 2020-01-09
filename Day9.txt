@@ -1,0 +1,15 @@
+﻿S3 Object Storage
+* It is a service by Amazon Web Services which provides us with an object-type storage. 
+* Full form of S3 is Simple Storage Service.
+* Data is stored as objects within resources called “buckets”.
+*  A single object can be up to 5 terabytes in size.
+* S3 features include capabilities to append metadata tags to objects, move and store data across the S3 Storage Classes, configure and enforce data access controls, secure data against unauthorized users, run big data analytics, and monitor data at the object and bucket levels.
+* Objects can be accessed through S3 Access Points or directly through the bucket hostname.
+* To store an object in Amazon S3, you upload the file you want to store to a bucket. When you upload a file, you can set permissions on the object as well as any metadata.
+* Buckets are the containers for objects. You can have one or more buckets. For each bucket, you can control access to it (who can create, delete, and list objects in the bucket), view access logs for it and its objects, and choose the geographical region where Amazon S3 will store the bucket and its contents.
+Using S3 in our application
+1. Login to the AWS console. Go to S3 from resources and click create Bucket.
+2. In the Bucket name field, type a unique DNS-compliant name for your new bucket. Create your own bucket name using the following naming guidelines: The name must be unique across all existing bucket names in Amazon S3.
+3. Choose region and click create.
+4. One can upload objects by simply using the upload option in S3 bucket itself. 
+5. We can delete or move the objects by simply using the check box and selecting the respective operation.
