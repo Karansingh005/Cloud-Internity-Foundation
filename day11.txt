@@ -1,0 +1,43 @@
+﻿RDS (Relational Database Service)
+* It is a web service running "in the cloud" designed to simplify the setup, operation, and scaling of a relational database for use in applications.
+* Administration processes like patching the database software, backing up databases and enabling point-in-time recovery are managed automatically.
+* Amazon RDS was first released on 22 October 2009, supporting MySQL databases.
+* Support for Oracle Database was added in June 2011, MS SQL in May 2012, PostgreSQL in November 2013 and MariaDB in October 2015.
+* Features:
+   * Amazon RDS Multi-Availability Zone (AZ) allows users to automatically provision and maintain a synchronous physical or logical “standby” replica, depending on database engine, in a different Availability Zone.
+   * Read replicas allow different uses case such as to scale in for read-heavy database workloads.
+   * Performance metrics for Amazon RDS are available from the AWS Management Console.
+   * Amazon RDS creates and saves automated backups of RDS DB instances.
+
+
+Using MySQL on RDS as a service
+1. Login to your AWS account. Go to RDS from resources. 
+2. Select region and click on create database. 
+3. Select “MySQL” database engine.
+4. Configure the DB instance by adding values such as engine version, allocated storage, storage type etc.
+5. Click next and now configure the networking settings of the instance by adding VPC and subnet.
+6. Click create database.
+
+
+DynamoDB
+* Amazon DynamoDB is a fully managed proprietary NoSQL database service that supports key-value and document data structures and is offered by Amazon.com as part of the Amazon Web Services portfolio.
+* DynamoDB exposes a similar data model to and derives its name from Dynamo, but has a different underlying implementation.
+* Dynamo had a multi-master design requiring the client to resolve version conflicts and DynamoDB uses synchronous replication across multiple data centers for high durability and availability.
+* In DynamoDB, there is no query optimizer, and an index is simply another table with a different key (or two) that sits beside the original.
+* When a developer creates an index, she creates a new copy of her data, but only the fields that she specifies get copied over (at a minimum, the fields that she indexes on and the original table's primary key). 
+* DynamoDB users issue queries directly to their indices. There are two types of indices available. 
+* A global secondary index features a partition key (and optional sort key) that's different from the original table's partition key. 
+* A local secondary index features the same partition key as the original table, but a different sort key.
+* Both indices introduce entirely new query functionality to a DynamoDB database by allowing queries on new keys. 
+* Similar to relational database management systems, DynamoDB updates indices automatically on addition/update/deletion, so you must be judicious when creating them or risk slowing down a write-heavy database with a slew of index updates. 
+* DynamoDB uses JSON for its syntax.
+
+
+Using DynamoDB
+Creating Table
+1. Login to your AWS account. Go to DynamoDB from resources. 
+2. In the DynamoDB console, choose Create table.
+3. Add Table name. 
+4. The partition key is used to spread data across partitions for scalability. It’s important to choose an attribute with a wide range of values and that is likely to have evenly distributed access patterns. You can enable easy sorting with a sort key
+5. Next, you will enable DynamoDB auto scaling for your table.
+6. Scroll down the screen past Secondary indexes, Provisioned capacity, and Auto Scaling to the Create button.
