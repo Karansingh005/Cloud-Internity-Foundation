@@ -1,0 +1,139 @@
+﻿SQS
+* SQS is also known as Simple Queue Service.
+* It  is a message queueing service. 
+* It is an application integration service through which two decoupled/isolated applications/services can talk/interact with each other. 
+* SQS is a pull-based service. This means that we’ve to pull the message from the queue to read it. 
+* The message gets deleted from the queue once it's pulled/processed/read.
+* SQS can by default retain an unprocessed/unread message for 4 days. (This can varied from 60 seconds to 14 days)
+* Message size can range between 1 byte and 256 kb. Extended client library can increase this upto 2 GB by linking it to S3 bucket.
+
+
+There are two types of queues supported by Amazon SQS:
+
+
+1. Standard Queues
+* Delivers unlimited messages every second.
+* However, ordered delivery of messages is not guaranteed.
+* Duplicate messages can get delivered.
+
+
+2. FIFO 
+* First-in-first-out queuing system.
+* 300 messages per second is the limit.
+* Order of messages is maintained at the time of delivery.
+
+
+There are two kinds of polling (method of retrieving of messages from queues) supported by Amazon SQS:
+
+
+1. Short Polling
+* By-default
+* Returns messages immediately even if the message queue is empty.
+
+
+2. Long Polling
+* More use-cases.
+* Waits until the message arrives in queue, or until long polling timeout expires.
+
+
+Visibility time-out
+* It is a time duration, during which messages are invisible in the message queue.
+* Useful when multiple applications are interacting with the same message queue. 
+* Time duration can vary from 0 seconds to 12 hours (30 seconds by default). 
+* This is used when you don’t want another application to process the message when one application is already processing it.
+* When this time-out expires, the message can become visible again in the queue.
+* However, it can lead to duplicate messages in standard queue.
+
+
+EMR
+* It is a managed cluster platform.
+* It simplifies the running of big data frameworks like Apache Hadoop and Apache Spark.
+* This managed cluster platform is then used to analyze and process large amounts of data.
+
+
+Cluster
+* It is the central component of AWS EMR.
+* It is actually a collection of Amazon Elastic Compute (EC2) instances.
+* Each instance in this cluster is known as a node.
+* Each node has specific software installed to be a distributed application.
+
+
+Types of node:
+1. Master node: 
+* Manages the cluster
+* It runs software components that helps in distribution of data and tasks among other nodes.
+* It keeps track of the overall health of the cluster. 
+* It is possible to create a single node cluster with only one master node.
+
+
+2. Core node:
+* Have software components installed to store data and run tasks in the Hadoop Distributed File System (HDFS).
+* Multi node clusters have at-least one core node.
+
+
+3. Task Node:
+* Software components are installed for only performing tasks.
+* It does not store any data in HDFS.
+* Task nodes are optional.
+
+
+There are three ways to submit work to a cluster:
+1. Provide entire definition of work in functions that are specified as steps while cluster is created.
+2. Create a long running cluster for more than one job by using API or CLI.
+3. Create cluster, connect to master and other nodes by using SSH. Use interfaces that installed applications provide to perform specific tasks.
+
+
+We can submit one or more steps. Each step is a unit of work that contains instructions to manipulate data for processing by software installed on the cluster.   
+
+
+The following is an example process using four steps:                        
+1. Submit an input dataset for processing.                                                 
+2. Process the output of the first step by using a Pig program.                
+3. Process a second input dataset by using a Hive program.                        
+4. Write an output dataset.
+Steps are run in following sequence:
+1. A request is submitted to begin processing steps.
+2. The state of all steps is Pending.
+3. When a step starts processing, it changes to Running state.
+4. When it gets completed, it changes to Completed state.
+5. This pattern repeats for all steps.
+Amazon Kinesis 
+* It is a fully managed service for collecting, processing and analyzing streaming data.
+* The data can be streamed from multiple sources.
+* Streaming examples: Stock prices, game data, Social Network Data etc.
+* Kinesis Producer Library (KPL) is a java library to write data to stream.
+There are four types of Kinesis services:
+1. Kinesis Data Stream: 
+Producers (EC2 instances, Client, Mobile etc.) -> Kinesis data stream (contains number of shards) -> Consumers (Redshift, DynamoDB, S3, EMR)
+
+
+* You pay per running shard.
+* Data can persist in stream for 24 hours (default) to 168 hours.
+* Multiple customers, which can be configured manually.
+ 
+2. Kinesis Firehose Delivery Stream:
+Producers -> Kinesis Firehose (Transform/Compress/Secure) -> Customer (S3, Redshift)
+
+
+* Only one customer
+* Data immediately gets deleted from the stream once it's consumed.
+* We pay only when data is ingested. (Cheaper)
+* Incoming data can be converted to other few file formats, compress and secure data.
+
+
+3. Kinesis Video Stream:
+Producer (Security cam, Mobile etc.) -> Kinesis Video Stream -> Consumer (Sagemaker, Rekognition,Tensorflow)
+
+
+* Takes Video and Audio encoded data.
+* Output video data to ML and video processing service.
+
+
+4. Kinesis Data Analytics:
+Input Stream -> Data Analytics (<-> SQL) -> Output Stream
+
+
+* Allows real-time analytics of data.
+* You can have specific Firehose or data streams as input and output.
+* Data can pass through Data Analytics and is run through custom SQL to provide results.
+* Expensive since two streams are required.
