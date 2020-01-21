@@ -1,0 +1,59 @@
+﻿AWS Lambda
+* It helps in running our source code without actually provisioning or managing any servers.
+* Servers can automatically start or stop when needed.
+* Also termed as serverless functions.
+* It is used to glue together different services.
+* We pay per invocation of that function. Payment is according to compute time of that function.
+* Code is executed only when needed.
+* Scaled automatically to a few to a 1000 lambda functions concurrently in seconds.
+* Languages supported are: Ruby, Python, Java, Go, Powershell, NodeJs, C#.
+* We can create a custom runtime environment for not supported languages.
+
+
+Lambda function can be invoked from AWS SDK or any other service.
+
+
+Pricing
+* First million requests per month are free. $0.20 are charged for next million requests.
+* 400,000 GB seconds free per month. Then after $0.0000166667 per GB second. (for 128 MB memory used)
+
+
+Interface
+* Runtime is the compiler/language we choose for our function.
+* Triggers are the AWS resources or services that will trigger the function.
+
+
+Default Values
+* We can have only 1000 Lambda functions running concurrently. (Ask Support to increase)
+* /tmp directory can contain upto 500 MB.
+* We have no VPC by default. We can add it, but our function will lose internet.
+* Maximum timeout allowed is 15 minutes
+* Memory can be set between 128 MB to 3008 MB (at an increment of 64 MB).
+
+
+Cold Starts
+* For our runtime environment, AWS keeps the servers pre-configured. (just sitting in turned-off state)
+* When Lambda is invoked, these servers need to be turned on and code needs to be copied over.
+* During the time, there will be a delay in the running of the function. This delay is called Cold Start.
+* If server is already running while function is revoked, there will be less delay. This is known as Warm Server.
+* Cold start causes delay in user experience.
+* Serverless is not good for applications requiring an extremely good user response time.  
+* We can use Pre Warming techniques like increase load on the function to keep it warm or creating a pre command to pre warm the server.
+
+
+Lambda Layer
+* It is a zip archive that contains libraries, a custom runtime or other dependencies.
+* It basically contains extra code of lambda function.
+* This can decrease the size of code of lambda functions since many lambda functions can reference these lambda layers.
+* Limit: 5 lambda layers per function, extracted size of 250 MB per layer.
+* Layers are extracted to the /opt directory in the function execution environment.
+* Each runtime looks for libraries in a different location under /opt, depending on the language.
+
+
+Using SQS as input Lambda Function
+1. Create a standard queue under SQS.
+2. Create a lambda function using template for SQS with NodeJs.
+3. Add permission to use and process SQS message.
+4. Enable the SQS trigger.
+5. Send the message through SQS, which we created in the first step.
+6. Monitor the logs of SQS and Lambda, to check if message received and deleted successfully.
