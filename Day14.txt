@@ -6,6 +6,7 @@
 * The message gets deleted from the queue once it's pulled/processed/read.
 * SQS can by default retain an unprocessed/unread message for 4 days. (This can varied from 60 seconds to 14 days)
 * Message size can range between 1 byte and 256 kb. Extended client library can increase this upto 2 GB by linking it to S3 bucket.
+* Useful especially when you want to interact with only one application. If you want to interact with more than one, use SNS (Simple Notification Service).
 
 
 There are two types of queues supported by Amazon SQS:
